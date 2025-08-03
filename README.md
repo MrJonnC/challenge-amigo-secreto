@@ -4,14 +4,6 @@ Este proyecto es una aplicación web interactiva que permite ingresar nombres pa
 
 ---
 
-## 🚀 Comenzando
-
-Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas.
-
-Mira la sección [Despliegue](#-despliegue) para conocer cómo desplegar el proyecto en producción o internet.
-
----
-
 ## 📋 Pre-requisitos
 
 Solo necesitas un navegador moderno y un editor de código si deseas modificarlo.
@@ -105,9 +97,12 @@ Se sigue una estructura limpia con separación de estilos (`style.css`) y lógic
 
 ---
 
-## 📄 Licencia
+## 🥇 Insignia
+<p align="center">
+  <img src="https://avatars.githubusercontent.com/u/101259509?v=4" width="115" alt="Imagen Insignia"><br>
+  <sub><strong>.....</strong></sub>
+</p>
 
-Este proyecto está bajo la Licencia MIT - mira el archivo [LICENSE.md](LICENSE.md) para más detalles.
 
 ---
 

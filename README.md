@@ -99,7 +99,7 @@ Se sigue una estructura limpia con separación de estilos (`style.css`) y lógic
 
 ## 🥇 Insignia
 <p align="center">
-  <img src="https://avatars.githubusercontent.com/u/101259509?v=4" width="115" alt="Imagen Insignia"><br>
+  <img src="assets/insignia.png" width="115" alt="Imagen Insignia"><br>
   <sub><strong>.....</strong></sub>
 </p>
 

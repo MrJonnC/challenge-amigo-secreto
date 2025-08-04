@@ -52,17 +52,16 @@ function mostrarAmigos() {
 
         const span = document.createElement("span");
         span.textContent = nombre;
-        li.appendChild(span);
 
-        // Botón editar
+        const botonesDiv = document.createElement("div");
+        botonesDiv.classList.add("nombre-botones");
+
         const btnEditar = document.createElement("button");
         btnEditar.innerHTML = "✏️";
         btnEditar.className = "btn-editar";
         btnEditar.setAttribute("aria-label", `Editar a ${nombre}`);
         btnEditar.onclick = () => editarNombre(index, nombre, li);
-        li.appendChild(btnEditar);
 
-        // Botón eliminar
         const btnEliminar = document.createElement("button");
         btnEliminar.textContent = "✖";
         btnEliminar.className = "btn-eliminar";
@@ -72,7 +71,12 @@ function mostrarAmigos() {
             mostrarAmigos();
             actualizarBotones();
         };
-        li.appendChild(btnEliminar);
+
+        botonesDiv.appendChild(btnEditar);
+        botonesDiv.appendChild(btnEliminar);
+
+        li.appendChild(span);
+        li.appendChild(botonesDiv);
 
         lista.appendChild(li);
     });

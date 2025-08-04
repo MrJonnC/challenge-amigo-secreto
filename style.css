@@ -12,14 +12,12 @@
     --shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Fondo principal */
 body {
     height: 100vh;
     background-color: var(--color-primary);
@@ -30,7 +28,6 @@ body {
     color: var(--color-dark);
 }
 
-/* Contenido principal */
 .main-content {
     display: flex;
     flex-direction: column;
@@ -38,13 +35,14 @@ body {
     height: 100%;
 }
 
-/* Banner principal */
 .header-banner {
     flex: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 40px;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .main-title {
@@ -55,7 +53,6 @@ body {
     color: var(--color-light);
 }
 
-/* Sección de entrada */
 .input-section {
     flex: 60%;
     background-color: var(--color-secondary);
@@ -67,7 +64,6 @@ body {
     box-shadow: var(--shadow);
 }
 
-/* Título de sección */
 .section-title {
     font-size: 32px;
     font-weight: 700;
@@ -75,7 +71,6 @@ body {
     color: var(--color-primary);
 }
 
-/* Input y botón agregar */
 .input-wrapper {
     display: flex;
     width: 100%;
@@ -93,7 +88,6 @@ body {
     outline: none;
 }
 
-/* Botón de agregar nombre */
 .button-add {
     background-color: var(--color-accent);
     color: white;
@@ -109,7 +103,6 @@ body {
     background-color: var(--color-accent-hover);
 }
 
-/* Lista de amigos */
 ul {
     list-style: none;
     width: 100%;
@@ -117,7 +110,6 @@ ul {
     margin-top: 20px;
 }
 
-/* Ítems de la lista */
 .nombre-item {
     display: flex;
     justify-content: space-between;
@@ -128,13 +120,13 @@ ul {
     border-radius: 12px;
     box-shadow: var(--shadow);
     transition: transform 0.2s;
+    gap: 10px;
 }
 
 .nombre-item:hover {
     transform: scale(1.01);
 }
 
-/* Nombre del amigo */
 .nombre-item span {
     flex: 1;
     font-size: 18px;
@@ -142,7 +134,13 @@ ul {
     color: var(--color-dark);
 }
 
-/* Botones editar, eliminar, etc. */
+/* Contenedor de botones */
+.nombre-botones {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
 .btn-editar,
 .btn-eliminar,
 .btn-guardar,
@@ -151,7 +149,7 @@ ul {
     border: none;
     cursor: pointer;
     font-size: 18px;
-    margin-left: 10px;
+    margin-left: 5px;
     transition: transform 0.2s ease;
 }
 
@@ -167,7 +165,6 @@ ul {
 .btn-guardar  { color: var(--color-success); }
 .btn-cancelar { color: var(--color-muted); }
 
-/* Input al editar */
 .input-editar {
     flex: 1;
     padding: 8px 12px;
@@ -176,7 +173,6 @@ ul {
     border-radius: 8px;
 }
 
-/* Resultados del sorteo */
 .result-list {
     margin-top: 20px;
     font-size: 20px;
@@ -185,7 +181,6 @@ ul {
     text-align: center;
 }
 
-/* Botones de sorteo y reset */
 .sorteo-buttons {
     display: flex;
     gap: 20px;
@@ -236,4 +231,70 @@ ul {
 .button-draw img {
     width: 20px;
     height: 20px;
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 600px) {
+    .main-title {
+        font-size: 32px;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .section-title {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .input-wrapper {
+        flex-direction: column;
+        gap: 10px;
+        align-items: stretch;
+    }
+
+    .input-name {
+        border-radius: 30px;
+        border-right: 2px solid var(--color-primary);
+    }
+
+    .button-add {
+        border-radius: 30px;
+        width: 100%;
+    }
+
+    .nombre-item {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nombre-item span {
+        font-size: 16px;
+    }
+
+    .nombre-botones button {
+        font-size: 16px;
+    }
+
+    .sorteo-buttons {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .button-draw,
+    .button-reset {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .input-section {
+        padding: 20px 10px;
+        border-radius: 48px 48px 0 0;
+    }
+
+    ul {
+        padding: 0 10px;
+    }
 }
